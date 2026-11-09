@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>NS Digital Hub — Websites, SEO & Digital Marketing</title>
-<meta name="description" content="NS Digital Hub — We build modern websites, run result-driven digital marketing, SEO, social media and graphic design for schools, coaching, hospitals, shops, restaurants, real estate and e-commerce businesses." />
+<title>NS Digital Hub — by Naina & Sandeep | Websites, SEO & Digital Marketing</title>
+<meta name="description" content="NS Digital Hub — founded by Naina & Sandeep. We build modern websites, run result-driven digital marketing, SEO, social media and graphic design for schools, coaching, hospitals, shops, restaurants, real estate and e-commerce businesses." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -38,7 +38,7 @@
   .nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
   .logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.2rem}
   .logo-mark{width:44px;height:44px;border-radius:13px;background:var(--grad);display:grid;place-items:center;color:#fff;font-weight:800;font-size:1.05rem;box-shadow:0 8px 22px rgba(124,58,237,.45)}
-  .logo small{display:block;font-size:.68rem;font-weight:500;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+  .logo small{display:block;font-size:.68rem;font-weight:600;color:var(--muted);letter-spacing:1.2px;text-transform:uppercase}
   .nav-links{display:flex;align-items:center;gap:6px}
   .nav-links a{padding:9px 15px;border-radius:10px;font-size:.92rem;font-weight:600;color:var(--muted);transition:.25s}
   .nav-links a:hover{color:#fff;background:rgba(255,255,255,.06)}
@@ -51,7 +51,11 @@
   .pill .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 12px #22c55e;animation:pulse 2s infinite}
   @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
   .hero h1{font-size:clamp(2.1rem,4.6vw,3.5rem);line-height:1.15;font-weight:800;letter-spacing:-1px;margin-bottom:22px}
-  .hero p.lead{font-size:1.05rem;color:var(--muted);max-width:560px;margin-bottom:34px}
+  .hero p.lead{font-size:1.05rem;color:var(--muted);max-width:560px;margin-bottom:26px}
+  .hero-founders{display:flex;align-items:center;gap:12px;margin-bottom:30px;flex-wrap:wrap}
+  .founder-mini{display:flex;align-items:center;gap:9px;background:var(--card);border:1px solid var(--line);padding:6px 14px 6px 6px;border-radius:50px;font-size:.84rem;font-weight:700}
+  .founder-mini span{width:28px;height:28px;border-radius:50%;background:var(--grad);display:grid;place-items:center;color:#fff;font-weight:800;font-size:.82rem;flex-shrink:0}
+  .founder-tag{font-size:.8rem;color:var(--muted);font-weight:600}
   .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:44px}
   .hero-stats{display:flex;flex-wrap:wrap;gap:38px}
   .stat h3{font-size:1.9rem;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -80,9 +84,15 @@
   .about-badge span{font-size:.75rem;font-weight:600;opacity:.9}
   .about-content h2{font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:800;margin-bottom:20px;letter-spacing:-.5px}
   .about-content p{color:var(--muted);margin-bottom:18px}
-  .about-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:28px 0 34px}
+  .about-list{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:28px 0 26px}
   .about-list li{display:flex;align-items:center;gap:11px;font-size:.92rem;font-weight:600}
   .about-list i{color:#22c55e;font-size:1rem}
+  .founders{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:30px}
+  .founder-card{display:flex;align-items:center;gap:13px;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.3);padding:14px 16px;border-radius:16px;transition:.3s}
+  .founder-card:hover{transform:translateY(-3px);border-color:rgba(124,58,237,.6);background:rgba(124,58,237,.16)}
+  .founder-card .fa-avatar{width:48px;height:48px;border-radius:50%;background:var(--grad);display:grid;place-items:center;color:#fff;font-weight:800;font-size:1.1rem;flex-shrink:0;box-shadow:0 6px 18px rgba(124,58,237,.4)}
+  .founder-card h5{font-size:.95rem;font-weight:700}
+  .founder-card span{font-size:.76rem;color:var(--muted)}
   .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
   .service-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:34px 28px;transition:.35s;position:relative;overflow:hidden}
   .service-card::before{content:"";position:absolute;inset:0;opacity:0;transition:.35s;background:linear-gradient(160deg,rgba(124,58,237,.16),rgba(6,182,212,.06))}
@@ -102,19 +112,25 @@
   .ind-card i{font-size:1.7rem;margin-bottom:14px;display:block;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
   .ind-card h4{font-size:.95rem;font-weight:700}
   .ind-card p{font-size:.76rem;color:var(--muted);margin-top:5px}
-  .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .pf-filters{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:44px}
+  .pf-filter{padding:10px 22px;border-radius:50px;font-size:.85rem;font-weight:700;background:var(--card);border:1px solid var(--line);color:var(--muted);cursor:pointer;transition:.25s;font-family:inherit}
+  .pf-filter:hover{color:#fff;border-color:rgba(124,58,237,.4)}
+  .pf-filter.active{background:var(--grad);color:#fff;border-color:transparent;box-shadow:0 8px 22px rgba(124,58,237,.35)}
+  .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
   .pf-card{border-radius:var(--radius);overflow:hidden;position:relative;border:1px solid var(--line);background:var(--card);transition:.35s}
   .pf-card:hover{transform:translateY(-8px);box-shadow:var(--shadow);border-color:rgba(124,58,237,.5)}
-  .pf-img{position:relative;height:230px;overflow:hidden}
+  .pf-card.hide{display:none}
+  .pf-img{position:relative;height:260px;overflow:hidden}
   .pf-img img{width:100%;height:100%;object-fit:cover;transition:.6s}
   .pf-card:hover .pf-img img{transform:scale(1.1)}
-  .pf-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,15,26,.95),rgba(11,15,26,.2) 55%,transparent);display:flex;align-items:flex-end;padding:20px;opacity:0;transition:.35s}
+  .pf-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(11,15,26,.95),rgba(11,15,26,.2) 55%,transparent);display:flex;align-items:flex-end;padding:22px;opacity:0;transition:.35s}
   .pf-card:hover .pf-overlay{opacity:1}
-  .pf-overlay a{background:var(--grad);color:#fff;padding:10px 20px;border-radius:50px;font-size:.82rem;font-weight:700;display:inline-flex;align-items:center;gap:8px}
-  .pf-body{padding:20px 22px}
+  .pf-overlay a{background:var(--grad);color:#fff;padding:11px 22px;border-radius:50px;font-size:.84rem;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:.3s}
+  .pf-overlay a:hover{transform:scale(1.05)}
+  .pf-body{padding:22px 24px}
   .pf-body span{font-size:.73rem;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#67e8f9}
-  .pf-body h4{font-size:1.08rem;font-weight:700;margin-top:6px}
-  .pf-body p{font-size:.84rem;color:var(--muted);margin-top:5px}
+  .pf-body h4{font-size:1.15rem;font-weight:700;margin-top:6px}
+  .pf-body p{font-size:.86rem;color:var(--muted);margin-top:6px}
   .why{background:var(--bg-2)}
   .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
   .why-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 26px;display:flex;gap:18px;transition:.3s}
@@ -186,11 +202,13 @@
     .services-grid,.why-grid,.review-grid,.portfolio-grid,.ind-grid{grid-template-columns:1fr}
     .footer-grid{grid-template-columns:1fr;gap:32px}
     .about-list{grid-template-columns:1fr}
+    .founders{grid-template-columns:1fr}
     .hero{padding:140px 0 70px}
     .float-card{padding:11px 14px}
     .fc-1{left:-8px}.fc-2{right:-6px}
     .hero-stats{gap:26px}
     .contact-form{padding:26px 22px}
+    .pf-img{height:230px}
   }
 </style>
 </head>
@@ -200,7 +218,7 @@
   <div class="container nav">
     <a href="#home" class="logo">
       <span class="logo-mark">NS</span>
-      <span>NS Digital Hub<small>Grow Online</small></span>
+      <span>NS Digital Hub<small>Naina &amp; Sandeep</small></span>
     </a>
     <nav class="nav-links" id="navLinks">
       <a href="#home">Home</a>
@@ -229,6 +247,13 @@
       <span class="pill"><span class="dot"></span> Digital Agency for Growing Businesses</span>
       <h1>We Build <span class="grad-text">Websites</span> That Bring Real <span class="grad-text">Customers</span>.</h1>
       <p class="lead">NS Digital Hub is a full-service digital agency helping schools, coaching institutes, hospitals, shops, restaurants, real estate and e-commerce brands grow online — with stunning websites, result-driven marketing and design that converts.</p>
+
+      <div class="hero-founders">
+        <div class="founder-mini"><span>N</span> Naina</div>
+        <div class="founder-mini"><span>S</span> Sandeep</div>
+        <span class="founder-tag">— Founders of NS Digital Hub</span>
+      </div>
+
       <div class="hero-actions">
         <a href="#portfolio" class="btn btn-primary"><i class="fa-solid fa-eye"></i> View Portfolio</a>
         <a href="#contact" class="btn btn-ghost"><i class="fa-solid fa-paper-plane"></i> Get Free Quote</a>
@@ -264,14 +289,33 @@
       <h2>Your Growth Partner, <span class="grad-text">Not Just a Vendor</span></h2>
       <p>NS Digital Hub ek modern digital agency hai jo chhote aur medium businesses ko online grow karne mein madad karti hai. Hum sirf website nahi banate — hum aapke business ke liye ek complete digital identity create karte hain jo customers ka bharosa jeet sake.</p>
       <p>Hamari team web developers, designers aur digital marketers ki hai jo har project ko business results — jaise zyada leads, zyada enquiries aur zyada sales — ke perspective se dekhti hai.</p>
+
       <ul class="about-list">
-        <li><i class="fa-solid fa-circle-check"></i> Custom & Responsive Design</li>
+        <li><i class="fa-solid fa-circle-check"></i> Custom &amp; Responsive Design</li>
         <li><i class="fa-solid fa-circle-check"></i> SEO-Friendly Development</li>
         <li><i class="fa-solid fa-circle-check"></i> Affordable Pricing</li>
         <li><i class="fa-solid fa-circle-check"></i> On-Time Delivery</li>
         <li><i class="fa-solid fa-circle-check"></i> Dedicated Support</li>
         <li><i class="fa-solid fa-circle-check"></i> 100% Client Satisfaction</li>
       </ul>
+
+      <div class="founders">
+        <div class="founder-card">
+          <div class="fa-avatar">N</div>
+          <div>
+            <h5>Naina</h5>
+            <span>Co-Founder — Design &amp; Marketing</span>
+          </div>
+        </div>
+        <div class="founder-card">
+          <div class="fa-avatar">S</div>
+          <div>
+            <h5>Sandeep</h5>
+            <span>Co-Founder — Development &amp; Strategy</span>
+          </div>
+        </div>
+      </div>
+
       <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-handshake"></i> Work With Us</a>
     </div>
   </div>
@@ -290,7 +334,7 @@
         <h3>Website Development</h3>
         <p>Fast, mobile-friendly aur conversion-focused websites jo aapke customers ko impress karein.</p>
         <ul>
-          <li><i class="fa-solid fa-check"></i> Business & Portfolio Websites</li>
+          <li><i class="fa-solid fa-check"></i> Business &amp; Portfolio Websites</li>
           <li><i class="fa-solid fa-check"></i> E-commerce Stores</li>
           <li><i class="fa-solid fa-check"></i> School / Coaching Websites</li>
         </ul>
@@ -300,9 +344,9 @@
         <h3>Digital Marketing</h3>
         <p>Data-driven marketing campaigns jo aapke business tak sahi audience ko laate hain.</p>
         <ul>
-          <li><i class="fa-solid fa-check"></i> Google & Meta Ads</li>
+          <li><i class="fa-solid fa-check"></i> Google &amp; Meta Ads</li>
           <li><i class="fa-solid fa-check"></i> Lead Generation Funnels</li>
-          <li><i class="fa-solid fa-check"></i> Email & WhatsApp Marketing</li>
+          <li><i class="fa-solid fa-check"></i> Email &amp; WhatsApp Marketing</li>
         </ul>
       </div>
       <div class="service-card reveal">
@@ -310,7 +354,7 @@
         <h3>SEO Optimization</h3>
         <p>Google ke first page par rank karein aur bina ads ke free organic traffic paayein.</p>
         <ul>
-          <li><i class="fa-solid fa-check"></i> On-Page & Off-Page SEO</li>
+          <li><i class="fa-solid fa-check"></i> On-Page &amp; Off-Page SEO</li>
           <li><i class="fa-solid fa-check"></i> Local SEO (Google Maps)</li>
           <li><i class="fa-solid fa-check"></i> Keyword Research</li>
         </ul>
@@ -320,7 +364,7 @@
         <h3>Social Media Marketing</h3>
         <p>Instagram, Facebook aur YouTube par aapki brand ki strong aur consistent presence.</p>
         <ul>
-          <li><i class="fa-solid fa-check"></i> Content Calendar & Reels</li>
+          <li><i class="fa-solid fa-check"></i> Content Calendar &amp; Reels</li>
           <li><i class="fa-solid fa-check"></i> Page Management</li>
           <li><i class="fa-solid fa-check"></i> Paid Ad Campaigns</li>
         </ul>
@@ -330,17 +374,17 @@
         <h3>Graphic Designing</h3>
         <p>Eye-catching designs jo aapki brand ko professional aur memorable bana dein.</p>
         <ul>
-          <li><i class="fa-solid fa-check"></i> Logo & Brand Identity</li>
-          <li><i class="fa-solid fa-check"></i> Posters & Social Creatives</li>
-          <li><i class="fa-solid fa-check"></i> Brochures & Catalogues</li>
+          <li><i class="fa-solid fa-check"></i> Logo &amp; Brand Identity</li>
+          <li><i class="fa-solid fa-check"></i> Posters &amp; Social Creatives</li>
+          <li><i class="fa-solid fa-check"></i> Brochures &amp; Catalogues</li>
         </ul>
       </div>
       <div class="service-card reveal">
         <div class="service-icon"><i class="fa-solid fa-rectangle-ad"></i></div>
-        <h3>Google Ads & PPC</h3>
+        <h3>Google Ads &amp; PPC</h3>
         <p>Har rupee ka maximum return — targeted ads jo instant leads aur sales laate hain.</p>
         <ul>
-          <li><i class="fa-solid fa-check"></i> Search & Display Ads</li>
+          <li><i class="fa-solid fa-check"></i> Search &amp; Display Ads</li>
           <li><i class="fa-solid fa-check"></i> Remarketing Campaigns</li>
           <li><i class="fa-solid fa-check"></i> Conversion Tracking</li>
         </ul>
@@ -357,14 +401,14 @@
       <p>Chahe aap education sector mein ho ya retail, hum aapki industry ki zaroorat samajhte hain.</p>
     </div>
     <div class="ind-grid">
-      <div class="ind-card reveal"><i class="fa-solid fa-school"></i><h4>Schools</h4><p>Admission & Info Portals</p></div>
-      <div class="ind-card reveal"><i class="fa-solid fa-graduation-cap"></i><h4>Coaching</h4><p>Course & Enquiry Websites</p></div>
-      <div class="ind-card reveal"><i class="fa-solid fa-hospital"></i><h4>Hospitals</h4><p>Doctor & Appointment Sites</p></div>
-      <div class="ind-card reveal"><i class="fa-solid fa-store"></i><h4>Shops</h4><p>Business & Catalogue Sites</p></div>
-      <div class="ind-card reveal"><i class="fa-solid fa-utensils"></i><h4>Restaurants</h4><p>Menu & Online Ordering</p></div>
+      <div class="ind-card reveal"><i class="fa-solid fa-school"></i><h4>Schools</h4><p>Admission &amp; Info Portals</p></div>
+      <div class="ind-card reveal"><i class="fa-solid fa-graduation-cap"></i><h4>Coaching</h4><p>Course &amp; Enquiry Websites</p></div>
+      <div class="ind-card reveal"><i class="fa-solid fa-hospital"></i><h4>Hospitals</h4><p>Doctor &amp; Appointment Sites</p></div>
+      <div class="ind-card reveal"><i class="fa-solid fa-store"></i><h4>Shops</h4><p>Business &amp; Catalogue Sites</p></div>
+      <div class="ind-card reveal"><i class="fa-solid fa-utensils"></i><h4>Restaurants</h4><p>Menu &amp; Online Ordering</p></div>
       <div class="ind-card reveal"><i class="fa-solid fa-building"></i><h4>Real Estate</h4><p>Property Listing Websites</p></div>
-      <div class="ind-card reveal"><i class="fa-solid fa-cart-shopping"></i><h4>E-commerce</h4><p>Online Stores & Payment</p></div>
-      <div class="ind-card reveal"><i class="fa-solid fa-briefcase"></i><h4>Companies</h4><p>Corporate & B2B Websites</p></div>
+      <div class="ind-card reveal"><i class="fa-solid fa-cart-shopping"></i><h4>E-commerce</h4><p>Online Stores &amp; Payment</p></div>
+      <div class="ind-card reveal"><i class="fa-solid fa-briefcase"></i><h4>Companies</h4><p>Corporate &amp; B2B Websites</p></div>
     </div>
   </div>
 </section>
@@ -373,51 +417,92 @@
   <div class="container">
     <div class="sec-head reveal">
       <span class="sec-tag">Our Portfolio</span>
-      <h2>Demo Websites <span class="grad-text">We've Designed</span></h2>
-      <p>Different industries ke liye hamare kuch demo website designs — ye sirf start hai, aapka project bhi next ho sakta hai.</p>
+      <h2>Demo Websites <span class="grad-text">Crafted by Naina &amp; Sandeep</span></h2>
+      <p>Different industries ke liye hamare kuch demo website designs — filter karke dekh sakte ho. Aapka project bhi next ho sakta hai!</p>
     </div>
+
+    <div class="pf-filters reveal">
+      <button class="pf-filter active" data-filter="all">All</button>
+      <button class="pf-filter" data-filter="education">Education</button>
+      <button class="pf-filter" data-filter="food">Food &amp; Dining</button>
+      <button class="pf-filter" data-filter="realestate">Real Estate</button>
+      <button class="pf-filter" data-filter="ecommerce">E-commerce</button>
+      <button class="pf-filter" data-filter="healthcare">Healthcare</button>
+      <button class="pf-filter" data-filter="fitness">Fitness</button>
+      <button class="pf-filter" data-filter="retail">Retail</button>
+    </div>
+
     <div class="portfolio-grid">
-      <div class="pf-card reveal">
+      <!-- 1: School -->
+      <div class="pf-card reveal" data-category="education">
         <div class="pf-img">
           <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="School website demo" loading="lazy" />
           <div class="pf-overlay"><a href="#contact"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Demo</a></div>
         </div>
-        <div class="pf-body"><span>Education</span><h4>School Website</h4><p>Admission form, faculty, gallery & notice board</p></div>
+        <div class="pf-body"><span>Education</span><h4>School Website</h4><p>Admission form, faculty, gallery &amp; notice board</p></div>
       </div>
-      <div class="pf-card reveal">
+
+      <!-- 2: Restaurant -->
+      <div class="pf-card reveal" data-category="food">
         <div class="pf-img">
           <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Restaurant website demo" loading="lazy" />
           <div class="pf-overlay"><a href="#contact"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Demo</a></div>
         </div>
-        <div class="pf-body"><span>Food & Dining</span><h4>Restaurant Website</h4><p>Digital menu, table booking & online ordering</p></div>
+        <div class="pf-body"><span>Food &amp; Dining</span><h4>Restaurant Website</h4><p>Digital menu, table booking &amp; online ordering</p></div>
       </div>
-      <div class="pf-card reveal">
+
+      <!-- 3: Real Estate -->
+      <div class="pf-card reveal" data-category="realestate">
         <div class="pf-img">
           <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" alt="Real estate website demo" loading="lazy" />
           <div class="pf-overlay"><a href="#contact"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Demo</a></div>
         </div>
-        <div class="pf-body"><span>Real Estate</span><h4>Property Listing Site</h4><p>Property search, filters & enquiry forms</p></div>
+        <div class="pf-body"><span>Real Estate</span><h4>Property Listing Site</h4><p>Property search, filters &amp; enquiry forms</p></div>
       </div>
-      <div class="pf-card reveal">
+
+      <!-- 4: E-commerce -->
+      <div class="pf-card reveal" data-category="ecommerce">
         <div class="pf-img">
           <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" alt="E-commerce website demo" loading="lazy" />
           <div class="pf-overlay"><a href="#contact"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Demo</a></div>
         </div>
-        <div class="pf-body"><span>E-commerce</span><h4>Online Store</h4><p>Product catalogue, cart & secure payments</p></div>
+        <div class="pf-body"><span>E-commerce</span><h4>Online Store</h4><p>Product catalogue, cart &amp; secure payments</p></div>
       </div>
-      <div class="pf-card reveal">
+
+      <!-- 5: Coaching -->
+      <div class="pf-card reveal" data-category="education">
         <div class="pf-img">
           <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Coaching website demo" loading="lazy" />
           <div class="pf-overlay"><a href="#contact"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Demo</a></div>
         </div>
-        <div class="pf-body"><span>Coaching</span><h4>Coaching Institute Site</h4><p>Course details, results & enquiry form</p></div>
+        <div class="pf-body"><span>Education</span><h4>Coaching Institute Site</h4><p>Course details, results &amp; enquiry form</p></div>
       </div>
-      <div class="pf-card reveal">
+
+      <!-- 6: Hospital -->
+      <div class="pf-card reveal" data-category="healthcare">
         <div class="pf-img">
           <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80" alt="Hospital website demo" loading="lazy" />
           <div class="pf-overlay"><a href="#contact"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Demo</a></div>
         </div>
-        <div class="pf-body"><span>Healthcare</span><h4>Hospital / Clinic Site</h4><p>Doctors, services & appointment booking</p></div>
+        <div class="pf-body"><span>Healthcare</span><h4>Hospital / Clinic Site</h4><p>Doctors, services &amp; appointment booking</p></div>
+      </div>
+
+      <!-- 7: Gym / Fitness -->
+      <div class="pf-card reveal" data-category="fitness">
+        <div class="pf-img">
+          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Gym website demo" loading="lazy" />
+          <div class="pf-overlay"><a href="#contact"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Demo</a></div>
+        </div>
+        <div class="pf-body"><span>Fitness</span><h4>Gym &amp; Fitness Website</h4><p>Membership plans, trainers &amp; trial booking</p></div>
+      </div>
+
+      <!-- 8: Boutique / Shop -->
+      <div class="pf-card reveal" data-category="retail">
+        <div class="pf-img">
+          <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" alt="Boutique website demo" loading="lazy" />
+          <div class="pf-overlay"><a href="#contact"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Demo</a></div>
+        </div>
+        <div class="pf-body"><span>Retail</span><h4>Boutique / Shop Website</h4><p>Product showcase, offers &amp; WhatsApp ordering</p></div>
       </div>
     </div>
   </div>
@@ -452,7 +537,7 @@
       <div class="review-card reveal">
         <i class="fa-solid fa-quote-right quote"></i>
         <div class="stars">★★★★★</div>
-        <p>"NS Digital Hub ne hamare school ki website banayi — admission enquiries pehle se almost double ho gayi. Team bahut cooperative hai aur time par delivery di."</p>
+        <p>"NS Digital Hub ne hamare school ki website banayi — admission enquiries pehle se almost double ho gayi. Naina aur Sandeep dono bahut cooperative hain aur time par delivery di."</p>
         <div class="review-user"><div class="avatar">RS</div><div><h5>Rahul Sharma</h5><span>Director, Sunrise Public School</span></div></div>
       </div>
       <div class="review-card reveal">
@@ -515,8 +600,9 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
-        <a href="#home" class="logo" style="margin-bottom:16px"><span class="logo-mark">NS</span><span>NS Digital Hub<small>Grow Online</small></span></a>
+        <a href="#home" class="logo" style="margin-bottom:16px"><span class="logo-mark">NS</span><span>NS Digital Hub<small>Naina &amp; Sandeep</small></span></a>
         <p>We help businesses build a powerful online presence with modern websites, SEO, digital marketing and creative design.</p>
+        <p><strong>Founders:</strong> Naina &amp; Sandeep</p>
         <p><strong>Call/WhatsApp:</strong> +91 95822 09590 / +91 93116 10461</p>
         <p><strong>Email:</strong> thensdigitalhub@gmail.com</p>
         <div class="socials">
@@ -528,27 +614,50 @@
       </div>
       <div class="footer-col"><h5>Quick Links</h5><ul><li><a href="#home">Home</a></li><li><a href="#about">About Us</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#contact">Contact</a></li></ul></div>
       <div class="footer-col"><h5>Services</h5><ul><li><a href="#services">Website Development</a></li><li><a href="#services">Digital Marketing</a></li><li><a href="#services">SEO Optimization</a></li><li><a href="#services">Social Media</a></li><li><a href="#services">Graphic Designing</a></li></ul></div>
-      <div class="footer-col"><h5>Industries</h5><ul><li><a href="#industries">Schools & Coaching</a></li><li><a href="#industries">Hospitals</a></li><li><a href="#industries">Restaurants</a></li><li><a href="#industries">Real Estate</a></li><li><a href="#industries">E-commerce</a></li></ul></div>
+      <div class="footer-col"><h5>Industries</h5><ul><li><a href="#industries">Schools &amp; Coaching</a></li><li><a href="#industries">Hospitals</a></li><li><a href="#industries">Restaurants</a></li><li><a href="#industries">Real Estate</a></li><li><a href="#industries">E-commerce</a></li></ul></div>
     </div>
-    <div class="footer-bottom">© <span id="year"></span> NS Digital Hub. All Rights Reserved. | Designed with ❤️ for growing businesses.</div>
+    <div class="footer-bottom">© <span id="year"></span> NS Digital Hub — Naina &amp; Sandeep. All Rights Reserved. | Designed with ❤️ for growing businesses.</div>
   </div>
 </footer>
 
 <a href="https://wa.me/919582209590" target="_blank" class="wa-float" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
 
 <script>
+  /* --- Navbar scroll --- */
   const header = document.getElementById('header');
   window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 40); });
+
+  /* --- Mobile menu --- */
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
   navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
   navLinks.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => navLinks.classList.remove('open')); });
+
+  /* --- Scroll reveal --- */
   const revealEls = document.querySelectorAll('.reveal');
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('show'); io.unobserve(entry.target); } });
   }, { threshold: 0.12 });
   revealEls.forEach(el => io.observe(el));
+
+  /* --- Year --- */
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* --- Portfolio filter --- */
+  document.querySelectorAll('.pf-filter').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.pf-filter').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cat = btn.dataset.filter;
+      document.querySelectorAll('.pf-card').forEach(card => {
+        const show = (cat === 'all' || card.dataset.category === cat);
+        card.classList.toggle('hide', !show);
+        if (show) card.classList.add('show');
+      });
+    });
+  });
+
+  /* --- Contact form → WhatsApp --- */
   function sendToWhatsApp(e) {
     e.preventDefault();
     const name = document.getElementById('cName').value.trim();
