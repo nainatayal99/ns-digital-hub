@@ -42,8 +42,22 @@
   .nav-links{display:flex;align-items:center;gap:6px}
   .nav-links a{padding:9px 15px;border-radius:10px;font-size:.92rem;font-weight:600;color:var(--muted);transition:.25s}
   .nav-links a:hover{color:#fff;background:rgba(255,255,255,.06)}
-  .nav-cta{display:flex;align-items:center;gap:12px}
-  .nav-cta .btn{padding:11px 22px;font-size:.87rem}
+  .nav-cta{display:flex;align-items:center;gap:12px;position:relative}
+
+  /* --- Navbar WhatsApp Dropdown --- */
+  .wa-dropdown{position:relative}
+  .wa-toggle{display:inline-flex;align-items:center;gap:10px;padding:11px 22px;font-size:.87rem;border-radius:50px;font-weight:700;border:none;cursor:pointer;background:var(--grad);color:#fff;font-family:inherit;box-shadow:0 10px 30px rgba(124,58,237,.35);transition:.3s}
+  .wa-toggle:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(124,58,237,.5)}
+  .wa-toggle .fa-chevron-down{font-size:.68rem;transition:.25s}
+  .wa-dropdown.open .wa-toggle .fa-chevron-down{transform:rotate(180deg)}
+  .wa-menu{position:absolute;top:calc(100% + 12px);right:0;min-width:270px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:8px;box-shadow:var(--shadow);opacity:0;transform:translateY(-10px);pointer-events:none;transition:.25s;z-index:1100}
+  .wa-dropdown.open .wa-menu{opacity:1;transform:none;pointer-events:all}
+  .wa-menu a{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;color:var(--text);transition:.2s}
+  .wa-menu a:hover{background:rgba(37,211,102,.1)}
+  .wa-menu a i{font-size:1.4rem;color:#25d366;flex-shrink:0}
+  .wa-menu a strong{display:block;font-size:.88rem;font-weight:700;color:var(--text)}
+  .wa-menu a small{display:block;font-size:.74rem;color:var(--muted)}
+
   .nav-toggle{display:none;background:var(--card);border:1px solid var(--line);color:#fff;width:46px;height:46px;border-radius:12px;font-size:1.15rem;cursor:pointer}
   .hero{padding:170px 0 100px;position:relative;overflow:hidden;background:radial-gradient(900px 500px at 85% 10%,rgba(124,58,237,.22),transparent 60%),radial-gradient(700px 500px at 10% 90%,rgba(6,182,212,.16),transparent 60%),var(--bg)}
   .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
@@ -167,6 +181,12 @@
   .field input,.field textarea{width:100%;padding:13px 16px;border-radius:12px;font-family:inherit;font-size:.9rem;background:#0e1322;border:1px solid var(--line);color:var(--text);transition:.25s}
   .field input:focus,.field textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(124,58,237,.18)}
   .field textarea{resize:vertical;min-height:110px}
+  .phone-select{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .phone-opt{cursor:pointer}
+  .phone-opt input{display:none}
+  .phone-opt span{display:flex;align-items:center;gap:8px;padding:11px 12px;border-radius:12px;border:1px solid var(--line);background:#0e1322;font-size:.78rem;font-weight:600;color:var(--muted);transition:.25s;justify-content:center;text-align:center;line-height:1.3}
+  .phone-opt input:checked + span{border-color:#25d366;background:rgba(37,211,102,.12);color:#fff}
+  .phone-opt span i{color:#25d366;font-size:1rem}
   footer{background:var(--bg);border-top:1px solid var(--line);padding:60px 0 26px}
   .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
   .footer-col h5{font-size:.9rem;font-weight:700;margin-bottom:18px;letter-spacing:.5px}
@@ -178,8 +198,23 @@
   .socials a{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;background:var(--card);border:1px solid var(--line);color:var(--muted);transition:.3s}
   .socials a:hover{background:var(--grad);color:#fff;border-color:transparent;transform:translateY(-3px)}
   .footer-bottom{border-top:1px solid var(--line);padding-top:24px;text-align:center;font-size:.82rem;color:var(--muted)}
-  .wa-float{position:fixed;bottom:26px;right:26px;z-index:999;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;font-size:1.55rem;box-shadow:0 12px 30px rgba(37,211,102,.45);transition:.3s}
-  .wa-float:hover{transform:scale(1.1) rotate(6deg)}
+
+  /* --- Floating WhatsApp Widget (Both Numbers) --- */
+  .wa-widget{position:fixed;bottom:26px;right:26px;z-index:999;display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+  .wa-options{display:flex;flex-direction:column;gap:10px;transform:scale(.85) translateY(10px);transform-origin:bottom right;opacity:0;pointer-events:none;transition:.3s}
+  .wa-widget.open .wa-options{transform:none;opacity:1;pointer-events:all}
+  .wa-opt{display:flex;align-items:center;gap:12px;background:#fff;color:#062b14;padding:10px 16px 10px 12px;border-radius:50px;font-weight:700;box-shadow:0 8px 22px rgba(0,0,0,.3);transition:.25s;border:1px solid rgba(0,0,0,.05)}
+  .wa-opt:hover{transform:translateX(-4px);box-shadow:0 12px 28px rgba(37,211,102,.45)}
+  .wa-opt i{width:34px;height:34px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;font-size:1rem;flex-shrink:0}
+  .wa-opt strong{display:block;font-size:.82rem;font-weight:800;color:#062b14;white-space:nowrap}
+  .wa-opt small{display:block;font-size:.7rem;color:#5a6b7a;font-weight:600}
+  .wa-float{width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;border:none;cursor:pointer;display:grid;place-items:center;font-size:1.55rem;box-shadow:0 12px 30px rgba(37,211,102,.45);transition:.3s}
+  .wa-float:hover{transform:scale(1.08)}
+  .wa-float .wa-close{display:none;font-size:1.4rem}
+  .wa-widget.open .wa-float{background:#0e1322;box-shadow:0 12px 30px rgba(0,0,0,.4)}
+  .wa-widget.open .wa-float .wa-icon{display:none}
+  .wa-widget.open .wa-float .wa-close{display:grid}
+
   .reveal{opacity:0;transform:translateY(34px);transition:opacity .7s ease,transform .7s ease}
   .reveal.show{opacity:1;transform:none}
   @media(max-width:1024px){
@@ -195,7 +230,7 @@
     .nav-links.open{transform:none;opacity:1;pointer-events:all}
     .nav-links a{padding:13px 16px;font-size:.95rem}
     .nav-toggle{display:grid;place-items:center}
-    .nav-cta .btn{display:none}
+    .wa-dropdown{display:none}
     section{padding:74px 0}
   }
   @media(max-width:640px){
@@ -203,12 +238,15 @@
     .footer-grid{grid-template-columns:1fr;gap:32px}
     .about-list{grid-template-columns:1fr}
     .founders{grid-template-columns:1fr}
+    .phone-select{grid-template-columns:1fr}
     .hero{padding:140px 0 70px}
     .float-card{padding:11px 14px}
     .fc-1{left:-8px}.fc-2{right:-6px}
     .hero-stats{gap:26px}
     .contact-form{padding:26px 22px}
     .pf-img{height:230px}
+    .wa-widget{bottom:18px;right:18px}
+    .wa-opt strong{font-size:.78rem}
   }
 </style>
 </head>
@@ -231,9 +269,21 @@
       <a href="#contact">Contact</a>
     </nav>
     <div class="nav-cta">
-      <a href="https://wa.me/919582209590" target="_blank" class="btn btn-primary">
-        <i class="fa-brands fa-whatsapp"></i> Let's Talk
-      </a>
+      <div class="wa-dropdown" id="waDropdown">
+        <button class="wa-toggle" id="waToggle" aria-label="Chat on WhatsApp">
+          <i class="fa-brands fa-whatsapp"></i> Let's Talk <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="wa-menu">
+          <a href="https://wa.me/919582209590" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div><strong>+91 95822 09590</strong><small>Chat with Naina</small></div>
+          </a>
+          <a href="https://wa.me/919311610461" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div><strong>+91 93116 10461</strong><small>Chat with Sandeep</small></div>
+          </a>
+        </div>
+      </div>
       <button class="nav-toggle" id="navToggle" aria-label="Menu">
         <i class="fa-solid fa-bars"></i>
       </button>
@@ -302,17 +352,11 @@
       <div class="founders">
         <div class="founder-card">
           <div class="fa-avatar">N</div>
-          <div>
-            <h5>Naina</h5>
-            <span>Co-Founder — Design &amp; Marketing</span>
-          </div>
+          <div><h5>Naina</h5><span>Co-Founder — Design &amp; Marketing</span></div>
         </div>
         <div class="founder-card">
           <div class="fa-avatar">S</div>
-          <div>
-            <h5>Sandeep</h5>
-            <span>Co-Founder — Development &amp; Strategy</span>
-          </div>
+          <div><h5>Sandeep</h5><span>Co-Founder — Development &amp; Strategy</span></div>
         </div>
       </div>
 
@@ -433,7 +477,6 @@
     </div>
 
     <div class="portfolio-grid">
-      <!-- 1: School -->
       <div class="pf-card reveal" data-category="education">
         <div class="pf-img">
           <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80" alt="School website demo" loading="lazy" />
@@ -442,7 +485,6 @@
         <div class="pf-body"><span>Education</span><h4>School Website</h4><p>Admission form, faculty, gallery &amp; notice board</p></div>
       </div>
 
-      <!-- 2: Restaurant -->
       <div class="pf-card reveal" data-category="food">
         <div class="pf-img">
           <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Restaurant website demo" loading="lazy" />
@@ -451,7 +493,6 @@
         <div class="pf-body"><span>Food &amp; Dining</span><h4>Restaurant Website</h4><p>Digital menu, table booking &amp; online ordering</p></div>
       </div>
 
-      <!-- 3: Real Estate -->
       <div class="pf-card reveal" data-category="realestate">
         <div class="pf-img">
           <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" alt="Real estate website demo" loading="lazy" />
@@ -460,7 +501,6 @@
         <div class="pf-body"><span>Real Estate</span><h4>Property Listing Site</h4><p>Property search, filters &amp; enquiry forms</p></div>
       </div>
 
-      <!-- 4: E-commerce -->
       <div class="pf-card reveal" data-category="ecommerce">
         <div class="pf-img">
           <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" alt="E-commerce website demo" loading="lazy" />
@@ -469,7 +509,6 @@
         <div class="pf-body"><span>E-commerce</span><h4>Online Store</h4><p>Product catalogue, cart &amp; secure payments</p></div>
       </div>
 
-      <!-- 5: Coaching -->
       <div class="pf-card reveal" data-category="education">
         <div class="pf-img">
           <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Coaching website demo" loading="lazy" />
@@ -478,7 +517,6 @@
         <div class="pf-body"><span>Education</span><h4>Coaching Institute Site</h4><p>Course details, results &amp; enquiry form</p></div>
       </div>
 
-      <!-- 6: Hospital -->
       <div class="pf-card reveal" data-category="healthcare">
         <div class="pf-img">
           <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80" alt="Hospital website demo" loading="lazy" />
@@ -487,7 +525,6 @@
         <div class="pf-body"><span>Healthcare</span><h4>Hospital / Clinic Site</h4><p>Doctors, services &amp; appointment booking</p></div>
       </div>
 
-      <!-- 7: Gym / Fitness -->
       <div class="pf-card reveal" data-category="fitness">
         <div class="pf-img">
           <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Gym website demo" loading="lazy" />
@@ -496,7 +533,6 @@
         <div class="pf-body"><span>Fitness</span><h4>Gym &amp; Fitness Website</h4><p>Membership plans, trainers &amp; trial booking</p></div>
       </div>
 
-      <!-- 8: Boutique / Shop -->
       <div class="pf-card reveal" data-category="retail">
         <div class="pf-img">
           <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=800&q=80" alt="Boutique website demo" loading="lazy" />
@@ -567,11 +603,11 @@
       <div class="contact-cards reveal">
         <a class="contact-card" href="https://wa.me/919582209590" target="_blank">
           <div class="ic wa"><i class="fa-brands fa-whatsapp"></i></div>
-          <div><h4>WhatsApp (Primary)</h4><p>+91 95822 09590 — Chat with us</p></div>
+          <div><h4>WhatsApp — Naina</h4><p>+91 95822 09590 — Chat with us</p></div>
         </a>
         <a class="contact-card" href="https://wa.me/919311610461" target="_blank">
           <div class="ic wa"><i class="fa-brands fa-whatsapp"></i></div>
-          <div><h4>WhatsApp (Alternate)</h4><p>+91 93116 10461 — Chat with us</p></div>
+          <div><h4>WhatsApp — Sandeep</h4><p>+91 93116 10461 — Chat with us</p></div>
         </a>
         <a class="contact-card" href="https://instagram.com/thensdigitalhub" target="_blank">
           <div class="ic ig"><i class="fa-brands fa-instagram"></i></div>
@@ -588,6 +624,19 @@
         <form onsubmit="sendToWhatsApp(event)">
           <div class="field"><label>Aapka Naam</label><input type="text" id="cName" placeholder="Enter your name" required /></div>
           <div class="field"><label>Business / Website Type</label><input type="text" id="cBusiness" placeholder="e.g. School Website, E-commerce Store" required /></div>
+          <div class="field">
+            <label>Kisko WhatsApp karein?</label>
+            <div class="phone-select">
+              <label class="phone-opt">
+                <input type="radio" name="cPhone" value="919582209590" checked>
+                <span><i class="fa-brands fa-whatsapp"></i> Naina<br><small style="color:var(--muted);font-size:.68rem">95822 09590</small></span>
+              </label>
+              <label class="phone-opt">
+                <input type="radio" name="cPhone" value="919311610461">
+                <span><i class="fa-brands fa-whatsapp"></i> Sandeep<br><small style="color:var(--muted);font-size:.68rem">93116 10461</small></span>
+              </label>
+            </div>
+          </div>
           <div class="field"><label>Message</label><textarea id="cMsg" placeholder="Apni requirement likhein..." required></textarea></div>
           <button type="submit" class="btn btn-wa" style="width:100%;justify-content:center"><i class="fa-brands fa-whatsapp"></i> Send on WhatsApp</button>
         </form>
@@ -603,13 +652,13 @@
         <a href="#home" class="logo" style="margin-bottom:16px"><span class="logo-mark">NS</span><span>NS Digital Hub<small>Naina &amp; Sandeep</small></span></a>
         <p>We help businesses build a powerful online presence with modern websites, SEO, digital marketing and creative design.</p>
         <p><strong>Founders:</strong> Naina &amp; Sandeep</p>
-        <p><strong>Call/WhatsApp:</strong> +91 95822 09590 / +91 93116 10461</p>
+        <p><strong>WhatsApp:</strong> +91 95822 09590 (Naina) · +91 93116 10461 (Sandeep)</p>
         <p><strong>Email:</strong> thensdigitalhub@gmail.com</p>
         <div class="socials">
-          <a href="https://wa.me/919582209590" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://wa.me/919582209590" target="_blank" aria-label="WhatsApp Naina"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://wa.me/919311610461" target="_blank" aria-label="WhatsApp Sandeep"><i class="fa-brands fa-whatsapp"></i></a>
           <a href="https://instagram.com/thensdigitalhub" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
           <a href="mailto:thensdigitalhub@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
         </div>
       </div>
       <div class="footer-col"><h5>Quick Links</h5><ul><li><a href="#home">Home</a></li><li><a href="#about">About Us</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#contact">Contact</a></li></ul></div>
@@ -620,7 +669,23 @@
   </div>
 </footer>
 
-<a href="https://wa.me/919582209590" target="_blank" class="wa-float" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<!-- ================= FLOATING WHATSAPP WIDGET (BOTH NUMBERS) ================= -->
+<div class="wa-widget" id="waWidget">
+  <div class="wa-options">
+    <a href="https://wa.me/919582209590" target="_blank" class="wa-opt">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span><strong>+91 95822 09590</strong><small>Chat with Naina</small></span>
+    </a>
+    <a href="https://wa.me/919311610461" target="_blank" class="wa-opt">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span><strong>+91 93116 10461</strong><small>Chat with Sandeep</small></span>
+    </a>
+  </div>
+  <button class="wa-float" id="waFloatBtn" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp wa-icon"></i>
+    <i class="fa-solid fa-xmark wa-close"></i>
+  </button>
+</div>
 
 <script>
   /* --- Navbar scroll --- */
@@ -657,13 +722,40 @@
     });
   });
 
-  /* --- Contact form → WhatsApp --- */
+  /* --- Navbar WhatsApp dropdown --- */
+  const waDropdown = document.getElementById('waDropdown');
+  const waToggleBtn = document.getElementById('waToggle');
+  waToggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    waDropdown.classList.toggle('open');
+    document.getElementById('waWidget').classList.remove('open');
+  });
+  document.querySelectorAll('.wa-menu a').forEach(a => {
+    a.addEventListener('click', () => waDropdown.classList.remove('open'));
+  });
+
+  /* --- Floating WhatsApp widget (both numbers) --- */
+  const waWidget = document.getElementById('waWidget');
+  document.getElementById('waFloatBtn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    waWidget.classList.toggle('open');
+    waDropdown.classList.remove('open');
+  });
+
+  /* --- Close dropdowns on outside click --- */
+  document.addEventListener('click', (e) => {
+    if (!waDropdown.contains(e.target)) waDropdown.classList.remove('open');
+    if (!waWidget.contains(e.target)) waWidget.classList.remove('open');
+  });
+
+  /* --- Contact form → WhatsApp (both numbers) --- */
   function sendToWhatsApp(e) {
     e.preventDefault();
     const name = document.getElementById('cName').value.trim();
     const business = document.getElementById('cBusiness').value.trim();
     const msg = document.getElementById('cMsg').value.trim();
-    const phone = '919582209590';
+    const phoneEl = document.querySelector('input[name="cPhone"]:checked');
+    const phone = phoneEl ? phoneEl.value : '919582209590';
     const text = `Hi NS Digital Hub! 👋%0A%0A*Name:* ${name}%0A*Business:* ${business}%0A*Message:* ${msg}`;
     window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
   }
